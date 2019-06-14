@@ -4,7 +4,7 @@ Installation will take place on a Digital Ocean droplet with Ubuntu 18.04
 
 ## Install docker
 
-```
+```bash
 apt update
 apt install apt-transport-https ca-certificates curl software-properties-common -y
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
