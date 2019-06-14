@@ -79,6 +79,36 @@ Note that any change you make in the container is not persistent between the con
 docker ps
 ```
 
+## List all containers (active and inactive)
+
+```
+docker ps -a
+```
+
+## Start a stopped container
+
+```
+docker start d9b100f2f636
+```
+
+where `d9b100f2f636` is the `CONTAINER ID` that is listed in the `docker ps -a` command
+
+## Stop a running container
+
+```
+docker stop d9b100f2f636
+```
+
+where `d9b100f2f636` is the `CONTAINER ID` that is listed in the `docker ps -a` command
+
+## Remove (delete) a container
+
+```
+docker rm d9b100f2f636
+```
+
+where `d9b100f2f636` is the `CONTAINER ID` that is listed in the `docker ps -a` command
+
 ## List available images
 
 ```
