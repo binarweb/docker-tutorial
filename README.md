@@ -137,3 +137,4 @@ The images are listed from https://hub.docker.com/
 
 - https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04
 - http://phase2.github.io/devtools/common-tasks/ssh-into-a-container/
+- https://www.digitalocean.com/community/tutorials/how-to-share-data-between-the-docker-container-and-the-host
