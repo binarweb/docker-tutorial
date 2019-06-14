@@ -22,7 +22,9 @@ apt install docker-ce -y
 ```
 
 To test the status of docker service:  
-`systemctl status docker`
+```
+systemctl status docker
+```
 
 ## Run a docker image in a container
 
@@ -60,3 +62,40 @@ Share images, automate workflows, and more with a free Docker ID:
 For more examples and ideas, visit:
  https://docs.docker.com/get-started/
 </pre>
+
+Note that the container prints the message and exists immediately.
+
+## Runing a docker image with interactive shell
+
+```
+docker run -it ubuntu
+```
+
+Note that any change you make in the container is not persistent between the container restarts.
+
+## List running containers
+
+```
+docker ps
+```
+
+## List available images
+
+```
+docker images
+```
+
+## Search for images
+
+```
+docker search ubuntu
+```
+
+Default limit is 25. To list more results use `--limit 100` option.  
+The images are listed from https://hub.docker.com/  
+
+
+### Useful links
+
+- https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04
+
