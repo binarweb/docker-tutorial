@@ -71,7 +71,7 @@ Note that the container prints the message and exists immediately.
 docker run -it ubuntu
 ```
 
-Note that any change you make in the container is not persistent between the container restarts.
+Note that any change you make in the container is persistent between the container restarts.
 
 ## 5. List running containers
 
@@ -138,3 +138,4 @@ The images are listed from https://hub.docker.com/
 - https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04
 - http://phase2.github.io/devtools/common-tasks/ssh-into-a-container/
 - https://www.digitalocean.com/community/tutorials/how-to-share-data-between-the-docker-container-and-the-host
+- https://www.mirantis.com/blog/how-do-i-create-a-new-docker-image-for-my-application/
