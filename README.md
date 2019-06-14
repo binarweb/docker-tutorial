@@ -140,3 +140,4 @@ The images are listed from https://hub.docker.com/
 - https://www.digitalocean.com/community/tutorials/how-to-share-data-between-the-docker-container-and-the-host
 - https://www.mirantis.com/blog/how-do-i-create-a-new-docker-image-for-my-application/
 - https://serverfault.com/questions/924779/docker-cron-not-working
+- https://github.com/francarmona/docker-ubuntu16-apache2-php7/blob/master/Dockerfile
