@@ -2,6 +2,13 @@
 
 Installation will take place on a Digital Ocean droplet with Ubuntu 18.04  
 
+## Installing some tools (optional)
+
+```bash
+apt update
+apt install git mc htop screen -y
+```
+
 ## Install docker
 
 ```bash
