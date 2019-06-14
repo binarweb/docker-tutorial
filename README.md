@@ -2,14 +2,14 @@
 
 Installation will take place on a Digital Ocean droplet with Ubuntu 18.04  
 
-## Installing some tools (optional)
+## 1. Installing some tools (optional)
 
 ```bash
 apt update
 apt install git mc htop screen -y
 ```
 
-## Install docker
+## 2. Install docker
 
 ```bash
 apt update
@@ -26,7 +26,7 @@ To test the status of docker service:
 systemctl status docker
 ```
 
-## Run a docker image in a container
+## 3. Run a docker image in a container
 
 ```
 docker run hello-world
@@ -65,7 +65,7 @@ For more examples and ideas, visit:
 
 Note that the container prints the message and exists immediately.
 
-## Runing a docker image with interactive shell
+## 4. Runing a docker image with interactive shell
 
 ```
 docker run -it ubuntu
@@ -73,19 +73,19 @@ docker run -it ubuntu
 
 Note that any change you make in the container is not persistent between the container restarts.
 
-## List running containers
+## 5. List running containers
 
 ```
 docker ps
 ```
 
-## List all containers (active and inactive)
+## 6. List all containers (active and inactive)
 
 ```
 docker ps -a
 ```
 
-## Start a stopped container
+## 7. Start a stopped container
 
 ```
 docker start d9b100f2f636
@@ -93,7 +93,7 @@ docker start d9b100f2f636
 
 where `d9b100f2f636` is the `CONTAINER ID` that is listed in the `docker ps -a` command
 
-## Stop a running container
+## 8. Stop a running container
 
 ```
 docker stop d9b100f2f636
@@ -101,7 +101,7 @@ docker stop d9b100f2f636
 
 where `d9b100f2f636` is the `CONTAINER ID` that is listed in the `docker ps -a` command
 
-## Remove (delete) a container
+## 9. Remove (delete) a container
 
 ```
 docker rm d9b100f2f636
@@ -109,13 +109,21 @@ docker rm d9b100f2f636
 
 where `d9b100f2f636` is the `CONTAINER ID` that is listed in the `docker ps -a` command
 
-## List available images
+## 10. SSH into a running container
+
+```
+docker exec -it d9b100f2f636 /bin/bash
+```
+
+where `d9b100f2f636` is the `CONTAINER ID` that is listed in the `docker ps -a` command
+
+## 11. List available images
 
 ```
 docker images
 ```
 
-## Search for images
+## 12. Search for images
 
 ```
 docker search ubuntu
@@ -128,4 +136,4 @@ The images are listed from https://hub.docker.com/
 ### Useful links
 
 - https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04
-
+- http://phase2.github.io/devtools/common-tasks/ssh-into-a-container/
