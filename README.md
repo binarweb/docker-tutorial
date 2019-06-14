@@ -4,13 +4,13 @@ Installation will take place on a Digital Ocean droplet with Ubuntu 18.04
 
 ## Install docker
 
-`apt update
+```apt update
 apt install apt-transport-https ca-certificates curl software-properties-common -y
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
 apt update
 apt-cache policy docker-ce
-apt install docker-ce -y`
+apt install docker-ce -y```
 
 To test the status of docker service:  
 `systemctl status docker`
