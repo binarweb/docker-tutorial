@@ -158,8 +158,16 @@ RUN apt-get update --fix-missing && apt-get install -y apache2
 
 EXPOSE 80
 
-CMD ["/bin/bash"]
+# CMD ["/bin/bash"]
 ```
+
+create the image by running
+
+```
+docker build -t ubuntu:apache2 .
+```
+
+after it completes, the images will be in the list of images
 
 ## 15. Delete an image
 
