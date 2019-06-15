@@ -158,7 +158,7 @@ RUN apt-get update --fix-missing && apt-get install -y apache2
 
 EXPOSE 80
 
-# CMD ["/bin/bash"]
+CMD ["service", "apache2", "start"]
 ```
 
 create the image by running
@@ -185,6 +185,17 @@ docker system prune
 
 It will delete images, containers, volumes, and networks — that are dangling (not associated with a container).
 
+## 17. Exposing ports to the ouside of containers (local machine)
+
+```
+docker run -p 127.0.0.1:80:80 -d ubuntu:apache2 tail -f /dev/null
+```
+
+to make sure the port is exposed, run
+
+```
+netstat -tulnap | grep LISTEN
+```
 
 ### Useful links
 
