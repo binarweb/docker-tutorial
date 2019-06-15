@@ -93,7 +93,15 @@ docker start d9b100f2f636
 
 where `d9b100f2f636` is the `CONTAINER ID` that is listed in the `docker ps -a` command
 
-## 8. Stop a running container
+## 8. Keep the container running
+
+```
+docker run -d ubuntu tail -f /dev/null
+```
+
+where `ubuntu` is the image name
+
+## 9. Stop a running container
 
 ```
 docker stop d9b100f2f636
@@ -101,7 +109,7 @@ docker stop d9b100f2f636
 
 where `d9b100f2f636` is the `CONTAINER ID` that is listed in the `docker ps -a` command
 
-## 9. Remove (delete) a container
+## 10. Remove (delete) a container
 
 ```
 docker rm d9b100f2f636
@@ -109,7 +117,7 @@ docker rm d9b100f2f636
 
 where `d9b100f2f636` is the `CONTAINER ID` that is listed in the `docker ps -a` command
 
-## 10. SSH into a running container
+## 11. SSH into a running container
 
 ```
 docker exec -it d9b100f2f636 /bin/bash
@@ -117,13 +125,13 @@ docker exec -it d9b100f2f636 /bin/bash
 
 where `d9b100f2f636` is the `CONTAINER ID` that is listed in the `docker ps -a` command
 
-## 11. List available images
+## 12. List available images
 
 ```
 docker images
 ```
 
-## 12. Search for images
+## 13. Search for images
 
 ```
 docker search ubuntu
@@ -132,7 +140,28 @@ docker search ubuntu
 Default limit is 25. To list more results use `--limit 100` option.  
 The images are listed from https://hub.docker.com/  
 
-## 13. Delete an image
+## 14. Create a custom image
+
+```
+mkdir DOCKER-IMAGE-TEST
+cd DOCKER-IMAGE-TEST
+nano Dockerfile
+```
+
+and paste  
+
+```
+FROM ubuntu
+MAINTAINER Gigel <user@email.tld>
+
+RUN apt-get update --fix-missing && apt-get install -y apache2
+
+EXPOSE 80
+
+CMD ["/bin/bash"]
+```
+
+## 15. Delete an image
 
 ```
 docker rmi Image
@@ -140,7 +169,7 @@ docker rmi Image
 
 where `Image` is the image name
 
-## 14. Clean up docker
+## 16. Clean up docker
 
 ```
 docker system prune
@@ -156,6 +185,7 @@ It will delete images, containers, volumes, and networks — that are dangling (
 - https://www.digitalocean.com/community/tutorials/how-to-share-data-between-the-docker-container-and-the-host
 - https://www.mirantis.com/blog/how-do-i-create-a-new-docker-image-for-my-application/
 - https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes
+- https://stackoverflow.com/questions/30209776/docker-container-will-automatically-stop-after-docker-run-d/46898038
 - https://serverfault.com/questions/924779/docker-cron-not-working
 - https://github.com/francarmona/docker-ubuntu16-apache2-php7/blob/master/Dockerfile
 - https://github.com/laradock/laradock
