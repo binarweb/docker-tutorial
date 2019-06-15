@@ -132,6 +132,22 @@ docker search ubuntu
 Default limit is 25. To list more results use `--limit 100` option.  
 The images are listed from https://hub.docker.com/  
 
+## 13. Delete an image
+
+```
+docker rmi Image
+```
+
+where `Image` is the image name
+
+## 14. Clean up docker
+
+```
+docker system prune
+```
+
+It will delete images, containers, volumes, and networks — that are dangling (not associated with a container).
+
 
 ### Useful links
 
@@ -139,6 +155,7 @@ The images are listed from https://hub.docker.com/
 - http://phase2.github.io/devtools/common-tasks/ssh-into-a-container/
 - https://www.digitalocean.com/community/tutorials/how-to-share-data-between-the-docker-container-and-the-host
 - https://www.mirantis.com/blog/how-do-i-create-a-new-docker-image-for-my-application/
+- https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes
 - https://serverfault.com/questions/924779/docker-cron-not-working
 - https://github.com/francarmona/docker-ubuntu16-apache2-php7/blob/master/Dockerfile
 - https://github.com/laradock/laradock
