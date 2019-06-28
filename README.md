@@ -109,6 +109,12 @@ docker stop d9b100f2f636
 
 where `d9b100f2f636` is the `CONTAINER ID` that is listed in the `docker ps -a` command
 
+```
+docker stop -t=30 d9b100f2f636
+```
+
+-t=30 will allow the container to gracefully stop
+
 ## 10. Remove (delete) a container
 
 ```
