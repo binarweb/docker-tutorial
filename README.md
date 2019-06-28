@@ -113,7 +113,7 @@ where `d9b100f2f636` is the `CONTAINER ID` that is listed in the `docker ps -a` 
 docker stop -t=30 d9b100f2f636
 ```
 
--t=30 will allow the container to gracefully stop
+`-t=30` will allow the container to gracefully stop
 
 ## 10. Remove (delete) a container
 
@@ -202,6 +202,30 @@ to make sure the port is exposed, run
 ```
 netstat -tulnap | grep LISTEN
 ```
+
+## 18. Examples
+
+### Run MariaDB server
+
+```
+docker run --name some-mariadb -p 127.0.0.1:3307:3306 -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mariadb
+```
+
+the exposed MariaDB port used is 3307. to check it, run `netstat -tulnap | grep LISTEN`  
+
+to login to MariaDB server, run:
+
+```
+mysql -P 3307 -h 127.0.0.1 -u root -p
+```
+
+to SSH into the Docker container, run:
+
+```
+docker exec -it some-mariadb bash
+```
+
+more info https://hub.docker.com/_/mariadb
 
 ### Useful links
 
